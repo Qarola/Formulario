@@ -6,10 +6,20 @@ This is a Registration Form ReactJS with fields validations. This form was built
 
 ## Front-end:
 
-
 ```sh
+You can clone this repository following way:
+From the  terminal/console VSCode or Git Bash:
+cd
+mkdir "name file"
+cd "name file"
+$ git clone "url("cloned project URL")"
+Open file in your terminal VSCode or Git Bash.
+
 Please, run:
 
 $ npm install
 $ npm start
+
 ```
+
+
