@@ -3,6 +3,7 @@ This is a Registration Form ReactJS with fields validations. This form was built
 
 ![React-form-validation](https://user-images.githubusercontent.com/67078790/157274339-e3bb871e-b05f-4e8e-bcac-635c90f8377e.PNG)
 
+![menu-responsive-form](https://user-images.githubusercontent.com/67078790/157274768-26a498dd-a1cc-42a3-bba5-10a36e60d368.PNG)
 
 ## Front-end:
 
