@@ -44,6 +44,8 @@
 .nav-item {
   line-height: 40px;
   margin-right: 1rem;
+  cursor:pointer;
+  color: white;
 }
 
 .nav-item:after {
@@ -78,7 +80,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-top: 1pxsolid #fff;
+    border-top: 1px solid #fff;
     position: absolute;
     top: 80px;
     left: -110%;
@@ -102,7 +104,8 @@
     padding: 1.5rem;
     width: 100%;
     display: table;
-  }
+    
+  }   
 
   .nav-icon {
     display: block;

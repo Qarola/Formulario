@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addUser } from "../../redux/actions";
 import { BsFillArrowUpLeftCircleFill } from "react-icons/bs";
+import { Alert } from "./Alert";
 import uuid from "react-uuid";
 
 //fields validations
@@ -53,6 +54,10 @@ export default function Form() {
     ageRange: "",
   });
   const [errors, setErrors] = useState({});
+  const [showAlert, setShowAlert] = useState(false);
+  const airSelected = useSelector(state => state.airSelected);
+
+
 
   //Event change handler
   function handleChange(e) {
@@ -79,13 +84,23 @@ export default function Form() {
     );
     dispatch(addUser(input));
     console.log(addUser(input));
-    alert(
-      "Your information was sent successfully, we will be in contact with you!"
-    );
-    window.location.reload();
+    
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false)
+    }, 5000)
+
+    setInput("");
   }
 
   return (
+    <>
+  <h3 className="text-center">Hello, welcome!, we know you want to travel in an {airSelected.name}, please fill out the following form:</h3>
+  <br />
+  {
+      showAlert && 
+      <Alert />
+   }
     <div className="container" key={input.id}>
       <form className="container__form" onSubmit={(e) => handleSubmit(e)}>
         <div className="container__form-control">
@@ -168,5 +183,6 @@ export default function Form() {
         Go back
       </Link>
     </div>
+    </>
   );
 }

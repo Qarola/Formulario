@@ -7,6 +7,16 @@ const initialState = {
     telephone: "",
     ageRange: "",
   },
+  airlines: {
+    items: [
+      { id: "1", name: "Vivair" },
+      { id: "2", name: "Avianca" },
+      { id: "3", name: "American Airlines" },
+      { id: "4", name: "Copa Airlines" },
+      { id: "5", name: "Latam" },
+    ],
+  },
+  airSelected: "",
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -26,6 +36,11 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         info: info,
+      };
+    case "SET_AIRSELECTED":
+      return {
+        ...state,
+        airSelected: action.payload,
       };
 
     default:
