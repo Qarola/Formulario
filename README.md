@@ -13,7 +13,7 @@ This is a Registration Form ReactJS with fields validations. This form was built
 $ cd
 $ mkdir "folder name"
 $ cd "folder name created"
-$ git clone 
+$ git clone https://github.com/Qarola/React-Form-Validation.git
 
 Open file in your terminal VSCode or Git Bash.
 
